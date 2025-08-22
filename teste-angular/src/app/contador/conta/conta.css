@@ -1,0 +1,21 @@
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    font-size: 60px;
+}
+
+p{
+    font-size: 200px;
+}
+
+.botoes{
+    flex-direction: row;
+}
