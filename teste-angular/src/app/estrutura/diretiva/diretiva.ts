@@ -23,7 +23,18 @@ export class Diretiva {
     this.tamanhoFonte -= 5;
   }
 
-  pessoas = ['123 - Thiago - Ativo', '321 - Kristian - Ativo', '777 - Gustavo - Inativo']
+  pessoas = [
+    { id: '123', nome: 'Thiago',  ativo: true },
+    { id: '321', nome: 'Kristian', ativo: true },
+    { id: '777', nome: 'Gustavo', ativo: false }
+  ];
 
+  estaAtivoTexto(teste:boolean){
+    if (teste == true){
+      return 'Ativo'
+    } else{
+      return 'Inativo'
+    }
+  }
 
 }

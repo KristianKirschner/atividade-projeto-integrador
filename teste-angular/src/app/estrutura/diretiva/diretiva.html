@@ -2,7 +2,9 @@
 <button (click)="aumentarFonte()">+</button>
 <button (click)="diminuirFonte()">-</button>
 <div *ngIf="mostrarMensagem">
-  <p [ngStyle]="{'font-size': tamanhoFonte + 'px'}" *ngFor="let pessoa of pessoas">
-    {{ pessoa }}
-  </p>
+    <p [ngClass]="{ 'ativo': pessoa.ativo, 'inativo': !pessoa.ativo }"
+    [ngStyle]="{ 'font-size': tamanhoFonte + 'px' }"
+    *ngFor="let pessoa of pessoas">
+    {{ pessoa.id + ' - ' + pessoa.nome + ' - ' + estaAtivoTexto(pessoa.ativo)}}
+    </p>
 </div>
