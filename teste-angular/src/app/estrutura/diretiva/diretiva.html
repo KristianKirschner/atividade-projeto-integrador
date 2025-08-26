@@ -1,0 +1,8 @@
+<button (click)="toggleMensagem()">Mostrar</button>
+<button (click)="aumentarFonte()">+</button>
+<button (click)="diminuirFonte()">-</button>
+<div *ngIf="mostrarMensagem">
+  <p [ngStyle]="{'font-size': tamanhoFonte + 'px'}" *ngFor="let pessoa of pessoas">
+    {{ pessoa }}
+  </p>
+</div>
