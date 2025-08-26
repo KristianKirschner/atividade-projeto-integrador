@@ -1,6 +1,8 @@
 <button (click)="toggleMensagem()">Mostrar</button>
 <button (click)="aumentarFonte()">+</button>
 <button (click)="diminuirFonte()">-</button>
+
+<h1>Lista de alunos: </h1>
 <div *ngIf="mostrarMensagem">
     <p [ngClass]="{ 'ativo': pessoa.ativo, 'inativo': !pessoa.ativo }"
     [ngStyle]="{ 'font-size': tamanhoFonte + 'px' }"
