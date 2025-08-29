@@ -1,0 +1,81 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.disponivel{
+    color: green;
+}
+
+.indisponivel{
+    color: red;
+    font-style: italic;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-style: oblique;
+}
+
+.containerdosbotao{
+  flex-direction: row;
+}
+
+button {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 30px;
+    flex-direction: column;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.botaoaumentar {
+  background: rgb(30, 247, 30);
+  color: white;
+}
+
+.botaodiminuir {
+  background: rgb(255, 23, 23);
+  color: white;
+}
+
+/* Estilo referente a tudo da tabela */
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+thead {
+  background-color: rgb(51, 157, 202);
+}
+
+th{
+  font-weight: 400;
+}
+
+th, td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td{
+  text-align: center;
+}
+
+tbody{
+  background-color: rgb(237 238 242);
+}
+
+.cabecalho {
+  font-weight: bold;
+}

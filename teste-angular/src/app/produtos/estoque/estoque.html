@@ -1,0 +1,41 @@
+<div class="container">
+<h1>Produtos em estoque:</h1>
+
+<div class="containerdosbotao">
+<button class="botaoaumentar" (click)="aumentar10()">Aumentar em 10%</button>
+<button class="botaodiminuir" (click)="diminuir10()">Diminuir em 10%</button>
+</div>
+
+  <table>
+
+    <thead>
+
+      <tr>
+        <th scope="col" class="cabecalho">Produto</th>
+        <th scope="col" class="cabecalho">Preço</th>
+        <th scope="col" class="cabecalho">Estoque</th>
+        <th scope="col" class="cabecalho">Disponibilidade</th>
+      </tr>
+
+    </thead>
+
+
+    <tbody *ngFor="let produto of produtos">
+      
+      <tr *ngIf="disponivel(produto.estoque)" [ngClass]="{ 'disponivel': disponivel(produto.estoque) }">
+          <th scope="row">{{produto.nome}}</th>
+          <td [ngStyle]="{'color': maior2000(produto.preco)}">{{'R$' + produto.preco.toFixed(2)}}</td>
+          <td>{{produto.estoque}}</td>
+          <td>Disponível</td>
+      </tr>
+
+      <tr *ngIf="!disponivel(produto.estoque)" [ngClass]="{'indisponivel': !disponivel(produto.estoque)}">
+          <th scope="row">{{produto.nome}}</th>
+          <td [ngStyle]="{'color': maior2000(produto.preco)}">{{'R$' + produto.preco.toFixed(2)}}</td>
+          <td>{{produto.estoque}}</td>
+          <td>Indisponível</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
